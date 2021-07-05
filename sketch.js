@@ -4,6 +4,9 @@ function setup()
 {
   createCanvas(windowWidth, windowHeight)
 
+  var foo = new p5.Speech(); 
+foo.speak('TIME GENIX WELCOMES YOU'); 
+  
   
   setTimeout(function select()
   { 
@@ -13,7 +16,16 @@ function setup()
     stroke("red")
     strokeWeight(3)
     text("Student: " + student, windowWidth/3,windowHeight/2+40)
-  }, 1000);
+  }, 3000);
+  setTimeout(function rand()
+  { 
+     if(student)
+    {
+      var foo2 = new p5.Speech(); 
+foo2.speak('STUDENT SELECTED IS' + student); 
+    }
+    }, 3500);
+  
   
 }
 function draw()
@@ -51,6 +63,10 @@ function draw()
     stroke("black")
     strokeWeight(7)
     text("Student: " + student, windowWidth/3,windowHeight/2+40)
+    //var foo2= new p5.SpeechRec();
+   // foo2.continuous('STUDENT SELECTED IS' + student)
+   
+    //foo2.stop()
   }
   
  
